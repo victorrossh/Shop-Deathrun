@@ -111,30 +111,30 @@ new g_Bayonets[BAYONET_NUM][eSkin] = {
 }*/
 
 new g_Usps[USP_NUM][eSkin] = {
-	{200, "Default",             "models/fwo2025/v_usp", 0, 0},
-	{223, "Abstract Blue",       "models/fwo2025/v_usp", 23, 1000},
-	{224, "Black",               "models/fwo2025/v_usp", 24, 1000},
-	{225, "Blue",                "models/fwo2025/v_usp", 25, 1000},
-	{226, "Bright",              "models/fwo2025/v_usp", 26, 1000},
-	{227, "Caiman",              "models/fwo2025/v_usp", 27, 1000},
-	{228, "Cardinal Crystal",    "models/fwo2025/v_usp", 28, 1000},
-	{229, "Cortex",              "models/fwo2025/v_usp", 29, 1000},
-	{230, "Electra",             "models/fwo2025/v_usp", 30, 1000},
-	{231, "Fire Flower",         "models/fwo2025/v_usp", 31, 1000},
-	{232, "Flashback",           "models/fwo2025/v_usp", 32, 1000},
-	{233, "Green Fire",          "models/fwo2025/v_usp", 33, 1000},
-	{234, "Green Realist",       "models/fwo2025/v_usp", 34, 1000},
-	{235, "Iridescent",          "models/fwo2025/v_usp", 35, 1000},
-	{236, "Lightning Monster",   "models/fwo2025/v_usp", 36, 1000},
-	{237, "Neo-Noir",            "models/fwo2025/v_usp", 37, 1000},
-	{238, "Night Wolf",          "models/fwo2025/v_usp", 38, 1000},
-	{239, "Oil Filter",          "models/fwo2025/v_usp", 39, 1000},
-	{240, "Purity",              "models/fwo2025/v_usp", 40, 1000},
-	{241, "Sakura",              "models/fwo2025/v_usp", 41, 1000},
-	{242, "Shaker",              "models/fwo2025/v_usp", 42, 1000},
-	{243, "Ticket to Hell",      "models/fwo2025/v_usp", 43, 1000},
-	{244, "Xiao",                "models/fwo2025/v_usp", 44, 1000},
-	{245, "Xtreme",              "models/fwo2025/v_usp", 45, 1000}
+	{200, "Default",             "models/fwo2025/v_usp_free_and_vip.mdl", 0, 0},
+	{223, "Abstract Blue",       "models/fwo2025/v_usp_free_and_vip.mdl", 23, 1000},
+	{224, "Black",               "models/fwo2025/v_usp_free_and_vip.mdl", 24, 1000},
+	{225, "Blue",                "models/fwo2025/v_usp_free_and_vip.mdl", 25, 1000},
+	{226, "Bright",              "models/fwo2025/v_usp_free_and_vip.mdl", 26, 1000},
+	{227, "Caiman",              "models/fwo2025/v_usp_free_and_vip.mdl", 27, 1000},
+	{228, "Cardinal Crystal",    "models/fwo2025/v_usp_free_and_vip.mdl", 28, 1000},
+	{229, "Cortex",              "models/fwo2025/v_usp_free_and_vip.mdl", 29, 1000},
+	{230, "Electra",             "models/fwo2025/v_usp_free_and_vip.mdl", 30, 1000},
+	{231, "Fire Flower",         "models/fwo2025/v_usp_free_and_vip.mdl", 31, 1000},
+	{232, "Flashback",           "models/fwo2025/v_usp_free_and_vip.mdl", 32, 1000},
+	{233, "Green Fire",          "models/fwo2025/v_usp_free_and_vip.mdl", 33, 1000},
+	{234, "Green Realist",       "models/fwo2025/v_usp_free_and_vip.mdl", 34, 1000},
+	{235, "Iridescent",          "models/fwo2025/v_usp_free_and_vip.mdl", 35, 1000},
+	{236, "Lightning Monster",   "models/fwo2025/v_usp_free_and_vip.mdl", 36, 1000},
+	{237, "Neo-Noir",            "models/fwo2025/v_usp_free_and_vip.mdl", 37, 1000},
+	{238, "Night Wolf",          "models/fwo2025/v_usp_free_and_vip.mdl", 38, 1000},
+	{239, "Oil Filter",          "models/fwo2025/v_usp_free_and_vip.mdl", 39, 1000},
+	{240, "Purity",              "models/fwo2025/v_usp_free_and_vip.mdl", 40, 1000},
+	{241, "Sakura",              "models/fwo2025/v_usp_free_and_vip.mdl", 41, 1000},
+	{242, "Shaker",              "models/fwo2025/v_usp_free_and_vip.mdl", 42, 1000},
+	{243, "Ticket to Hell",      "models/fwo2025/v_usp_free_and_vip.mdl", 43, 1000},
+	{244, "Xiao",                "models/fwo2025/v_usp_free_and_vip.mdl", 44, 1000},
+	{245, "Xtreme",              "models/fwo2025/v_usp_free_and_vip.mdl", 45, 1000}
 };
 
 new g_Chars[CHARS_NUM][ePlayerSkin]={
@@ -175,6 +175,10 @@ public plugin_precache(){
 		if(file_exists(mdl))
 			precache_generic(mdl);
 	}
+	precache_model(g_Knives[0][szModel]);
+	precache_model(g_Butchers[0][szModel]);
+	precache_model(g_Bayonets[0][szModel]);
+	precache_model(g_Usps[0][szModel]);
 }
 
 //Menu to choose the menu you want
